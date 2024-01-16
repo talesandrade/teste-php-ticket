@@ -28,7 +28,7 @@ class Pagina
     #Método que cria o cabeçalho inicial da página e exibe em seguida o conteúdo.
     public function mostrar()
     {
-        $stHtml = "<body><header><div style='background-color:eeeeff; width:100%; text-align:center; height:40px;'> 
+        $stHtml = "<body><header><div style='width:100%; text-align:center; height:40px;'> 
 				TESTE DE ADMISSÃO DE " . $this->nomeUsuario . '<br>' . $this->tituloPagina . '
 			</div></header>';
         $stHtml .= $this->conteudo;
