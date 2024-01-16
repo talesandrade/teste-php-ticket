@@ -22,7 +22,7 @@
     //gera a listagem, bom gerar função/método específico.
     $htmlConteudo = '';
     foreach ($arFuncionarios as $funcionario) {
-        $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionario->getId() . "'>" . $funcionario->getId() . '</a><br>';
+        $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionario->getId() . "'>" . $funcionario->getId() . " - " . $funcionario->getNome() . '</a><br>';
     }
 
 
