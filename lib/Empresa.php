@@ -27,3 +27,17 @@ class Empresa
         return $this->funcionarios;
     }
 }
+
+class TicketAndGo extends Empresa
+{
+    public $qualidades = [K_FUNCIONARIO_HONESTO,K_FUNCIONARIO_COOPERATIVO,K_FUNCIONARIO_ESPERTO,K_FUNCIONARIO_MOTIVADO];
+
+    public function addFuncionario($funcionario)
+    {
+        if(in_array($funcionario->getTipo(),$this->qualidades))
+        {
+            $this->funcionarios[] = $funcionario;
+        }
+    }
+
+}
