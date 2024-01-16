@@ -29,7 +29,7 @@ class Funcionarios
     public function pegarFuncionario()
     {
         if (isset($this->funcionarios[$this->indice++])) {
-            return $this->funcionarios[$this->indice++];
+            return $this->funcionarios[$this->indice];
         }
     }
 }
