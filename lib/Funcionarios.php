@@ -5,6 +5,7 @@ class Funcionarios
     public $funcionarios = [];
     public $indice = 0;
 
+    # Método construtor da classe que popula a lista de funcionários disponíveis para contratação.
     public function __construct()
     {
         $x = 0;
@@ -24,6 +25,7 @@ class Funcionarios
         $this->funcionarios[] = new Funcionario($x++, 'Dinho', K_FUNCIONARIO_DESONESTO);
     }
 
+    #Método retorna todos os funcionários disponíveis um por vez.
     public function pegarFuncionario()
     {
         if (isset($this->funcionarios[$this->indice++])) {

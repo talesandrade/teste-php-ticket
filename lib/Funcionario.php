@@ -13,6 +13,8 @@ class Funcionario
     public $nome;
     public $tipo;
 
+    # Método construtor da classe que define id, nome e tipo do funcionário ao ser instânciada
+    # e verifica se o tipo de funcionário informado é aceito.
     public function __construct($id, $nome, $tipo)
     {
         $this->id = $id;
@@ -30,16 +32,19 @@ class Funcionario
         }
     }
 
+    # Método retorna o id do funcionário.
     public function getId()
     {
         return $this->id;
     }
 
+    # Método retorna o nome do funcionário.
     public function getNome()
     {
         return $this->nome;
     }
 
+    # Método retorna o tipo do funcionário.
     public function getTipo()
     {
         return $this->tipo;
