@@ -1,5 +1,8 @@
 <?php
 
+    session_start();
+    $_SESSION['nomeUsuario'] = "TALES ANDRADE";
+
     include 'lib/Funcionarios.php';
     include 'lib/Empresa.php';
     include 'lib/Funcionario.php';
@@ -24,6 +27,6 @@
 
 
     $pagina = new Pagina('Página 1 - Lista de Funcionários Disponíveis');
-    //$pagina->setNomeUsuario();
+    $pagina->setNomeUsuario($_SESSION['nomeUsuario']);
     $pagina->setConteudo($htmlConteudo);
     $pagina->mostrar();
