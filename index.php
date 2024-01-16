@@ -39,6 +39,15 @@
         $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionarioTicketAndGo->getId() . "'>" . $funcionarioTicketAndGo->getId() . " - " . $funcionarioTicketAndGo->getNome() . '</a><br>';
     }
 
+    $htmlConteudo .= "<br/>";
+    $htmlConteudo .= "<h3>Porcentagens dos tipos</h3><br/>";
+
+    $quantidadeTipos = array_count_values(array_column($arFuncionarios, 'tipo'));
+    $totalFuncionarios = count($arFuncionarios);
+    foreach ($quantidadeTipos as $tipo => $qtd) {
+        $htmlConteudo .= $funcionario->retornaTipo($tipo).": ".round(($qtd*100)/$totalFuncionarios,2)."%<br/>";
+    }
+
 
     $pagina = new Pagina('Página 1 - Lista de Funcionários Disponíveis');
     $pagina->setNomeUsuario($_SESSION['nomeUsuario']);
