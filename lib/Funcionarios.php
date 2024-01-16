@@ -32,4 +32,18 @@ class Funcionarios
             return $this->funcionarios[$this->indice];
         }
     }
+
+    # Método que retorna apenas o funciorário do referente ao id informado.
+    public function pegarFuncionarioPorId($id)
+    {
+        if(isset($this->funcionarios[$id]))
+        {
+            return $this->funcionarios[$id];
+
+        }else{
+
+           return('Este funcionário não está disponível.');
+           
+        }
+    }
 }
