@@ -49,4 +49,31 @@ class Funcionario
     {
         return $this->tipo;
     }
+
+    public function retornaTipo($tipo)
+    {
+        switch ($tipo) {
+            case K_FUNCIONARIO_MOTIVADO:
+                return "Funcionário motivado";
+                break;
+            case K_FUNCIONARIO_ESPERTO:
+                return "Funcionário esperto";
+                break;
+            case K_FUNCIONARIO_HONESTO:
+                return "Funcionário honesto";
+                break;
+            case K_FUNCIONARIO_DESONESTO:
+                return "Funcionário desonesto";
+                break;
+            case K_FUNCIONARIO_PREGUICOSO:
+                return "Funcionário preguiçoso";
+                break;
+            case K_FUNCIONARIO_COOPERATIVO:
+                return "Funcionário cooperativo";
+                break;
+            default:
+                return "Tipo não localizado.";
+                break;
+        }
+    }
 }
