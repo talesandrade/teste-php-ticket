@@ -38,9 +38,9 @@ class Funcionarios
     # Método que retorna apenas o funciorário do referente ao id informado.
     public function pegarFuncionarioPorId($id)
     {
-        if(isset($this->funcionarios[$id-1]))
+        if(isset($this->funcionarios[$id]))
         {
-            return $this->funcionarios[$id-1];
+            return $this->funcionarios[$id];
 
         }else{
 
@@ -49,6 +49,7 @@ class Funcionarios
         }
     }
 
+    # Método que importa funcionários de arquivo externo.
     public function importarFuncionarios($ultimoId)
     {
         $funcionarios = file("candidatos.dump", FILE_IGNORE_NEW_LINES);
@@ -68,6 +69,7 @@ class Funcionarios
         return $this->funcionarios;
     }
 
+    # Método que converte o tipo do funcionário para o padrão utilizado no sistema.
     public function converterTipo($tipo)
     {
         switch ($tipo) {

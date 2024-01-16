@@ -32,6 +32,7 @@ class TicketAndGo extends Empresa
 {
     public $qualidades = [K_FUNCIONARIO_HONESTO,K_FUNCIONARIO_COOPERATIVO,K_FUNCIONARIO_ESPERTO,K_FUNCIONARIO_MOTIVADO];
 
+    # Método que adiciona apenas funcioários que segue o parâmetro de qualidade.
     public function addFuncionario($funcionario)
     {
         if(in_array($funcionario->getTipo(),$this->qualidades))

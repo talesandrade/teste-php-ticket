@@ -25,6 +25,7 @@
         $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionario->getId() . "'>" . $funcionario->getId() . " - " . $funcionario->getNome() . '</a><br>';
     }
 
+    # Empresa Ticker And Go
     $empresaTicketAndGo = new TicketAndGo(2);
     $funcionariosTicketAndGo = new Funcionarios();
     while ($funcionarioTicketAndGo = $funcionariosTicketAndGo->pegarFuncionario()) {
@@ -39,6 +40,7 @@
         $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionarioTicketAndGo->getId() . "'>" . $funcionarioTicketAndGo->getId() . " - " . $funcionarioTicketAndGo->getNome() . '</a><br>';
     }
 
+    #Porcentagens
     $htmlConteudo .= "<br/>";
     $htmlConteudo .= "<h3>Porcentagens dos tipos</h3><br/>";
 

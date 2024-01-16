@@ -50,6 +50,7 @@ class Funcionario
         return $this->tipo;
     }
 
+    #Métido que retorna o tipo do funcionário por extenso.
     public function retornaTipo($tipo)
     {
         switch ($tipo) {
