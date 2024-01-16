@@ -25,6 +25,19 @@
         $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionario->getId() . "'>" . $funcionario->getId() . " - " . $funcionario->getNome() . '</a><br>';
     }
 
+    $empresaTicketAndGo = new TicketAndGo(2);
+    $funcionariosTicketAndGo = new Funcionarios();
+    while ($funcionarioTicketAndGo = $funcionariosTicketAndGo->pegarFuncionario()) {
+        $empresaTicketAndGo->addFuncionario($funcionarioTicketAndGo);
+    }
+    $arFuncionariosTicketAndGo = $empresaTicketAndGo->getFuncionarios();
+    
+    $htmlConteudo .= "<br/>";
+    $htmlConteudo .= "<h3>Funcionários da Ticket And Go</h3><br/>";
+
+    foreach ($arFuncionariosTicketAndGo as $funcionarioTicketAndGo) {
+        $htmlConteudo .= "<a href='funcionario.php?id=" . $funcionarioTicketAndGo->getId() . "'>" . $funcionarioTicketAndGo->getId() . " - " . $funcionarioTicketAndGo->getNome() . '</a><br>';
+    }
 
 
     $pagina = new Pagina('Página 1 - Lista de Funcionários Disponíveis');
